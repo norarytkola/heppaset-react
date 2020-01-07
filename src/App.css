@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  min-height:100vh;
+}
+#container {
+  position:relative;
+  min-height:100vh;
+}
+#footer {
+  position:absolute;
+  bottom:0;
 }
 
 .App-logo {

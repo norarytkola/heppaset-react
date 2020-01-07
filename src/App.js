@@ -10,28 +10,32 @@ import About from './components/About';
 import Welcome from './components/Welcome';
 import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer'
 
 function App() {
+
+
   return (
-    <div className="container">
-      <div className="row justify-content-center pt-5">
-        <h1>Testing Page</h1>
-      </div>
-      <Router>
+    <div className="container-fluid bg-light" id="container" >
+      <Router> 
         <div className="row">
-          <div className="col-12">
-            <Menu/>
-          </div>
+          <Menu/>
         </div>
-        <Route exact path="/" render={() =>  
-          <Welcome />}/>
-        <Route path="/home" render={() =>  
-          <Home />}/>
-        <Route path="/about" render={() =>  
-          <About/>}/>
-        <Route path="/contact" render={() =>  
-          <Contact/>}/>
+        <div className="row justify-content-center mb-5 mt-5">
+          <h1 className="display-2">Heppaset</h1>
+        </div>
+          <Route exact path="/" render={() =>  
+            <Welcome />}/>
+          <Route path="/home" render={() =>  
+            <Home />}/>
+          <Route path="/about" render={() =>  
+            <About/>}/>
+          <Route path="/contact" render={() =>  
+            <Contact/>}/>
       </Router>
+      <div id="footer" className="row mb-0 w-100 mt-5">
+        <Footer/>
+      </div>
     </div>
   );
 }
